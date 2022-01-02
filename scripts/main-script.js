@@ -29,19 +29,18 @@ const loadFunction = () => {
     });
   };
 
-  const showRoomShow = () => {
-    showRoomBase();
-    hideInactiveSections("cars-content");
+  const showTry = (e) => {
+    let targetDivId = e.dataset.target;
+    hideInactiveSections(targetDivId);
+
+    if (targetDivId === "cars-content") {
+      showRoomBase();
+    }
   };
 
-  const showTry = () => {
-    console.log("e is ");
-  };
-
-  console.log(wheelContentDiv);
-
-  wheelContentDiv.addEventListener("click", showRoomShow);
-  showRoomButton.addEventListener("click", showRoomShow);
+  allNavbarButtons.forEach((element) => {
+    element.addEventListener("click", (e) => showTry(e.target));
+  });
 
   console.log("im loaded");
 };
