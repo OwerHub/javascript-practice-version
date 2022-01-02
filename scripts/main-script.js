@@ -41,7 +41,7 @@ const loadFunction = () => {
   allNavbarButtons.forEach((element) => {
     element.addEventListener("click", (e) => showTry(e.target));
   });
-
+  showRoomBase();
   console.log("im loaded");
 };
 
