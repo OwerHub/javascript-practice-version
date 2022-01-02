@@ -1,0 +1,83 @@
+[
+	{
+		"name": "Exeptionalist Way",
+		"aka": "Maradék Tároló",
+		"space": 99,
+		"note" : "első garázs, ide raktam a cuccaim",
+		"cars": [
+			"gauntlet", "TurismoR", "Huntley S", "Omnis", "Windsor (Livery)", "SC1", "Sandking XL"
+		]	
+	},
+	{
+		"name": "3 Alta St, Apt 57",
+		"aka": "Akciógépek",
+		"space": 99,
+		"note" : "Mission-okre ideális gépek",
+		"cars": [
+			"Nightshark", "Kuruma(Armored)", "Deluxo", "Opressor", "Paragon R (Armored)", "Scramjet"
+		]	
+	},
+	{
+		"name": "Del Perro Hts, 7",
+		"aka": "Fast And etc, 2",
+		"space": 99,
+		"note" : "Tuners gépek, amik nem fértek el az első garázsban, és pár másik gyors",
+		"cars": [
+			"Previon", "Tailgater S", "Remus", "Zentorno", "Cypher", "Futo GTX", "Vectre"
+		]	
+	},
+	{
+		"name": "Unit 1 Olimpic Fury",
+		"aka": "secret",
+		"space": 99,
+		"note" : "csak úgy vetem, szerintem lecserélem egy nagyobbra",
+		"cars": [
+			"Rat-Loader"
+		]	
+	},
+	{
+		"name": "331 Supply Street",
+		"aka": "American Muscle Cars",
+		"space": 10,
+		"note" : "Az összes kiemelet motoros, állat cuccom",
+		"cars": [
+			"Deviant", "HotKnife", "Duke-O-Death", "Gauntlet Classic Custom", "Phoenix", "Tulip", "Beater Dukes", "Peyote Gasser Topless"
+		]	
+	},
+	{
+		"name": "Great Chaparal Clubhouse",
+		"aka": "Motoros Klub",
+		"space": 99,
+		"note" : "Csak motoroknak, javítóműhellyel",
+		"cars": [
+			"Akuma", "Vortex", "Zombie Chopper", "Rat Bike", "Soverign", "Vortex"
+		]	
+	},
+	{
+		"name": "870 Route 68",
+		"aka": "Motoros Klub plusz ",
+		"space": 99,
+		"note" : "Ami nem fért el a motorklubban",
+		"cars": [
+			"Manchez Scout", "Hakucou", "Bati 810RR", "Hot Rod Blazer"
+		]	
+	},
+	{
+		"name": "Route 68 Facility",
+		"aka": "Katonai gépek",
+		"space": 10,
+		"note" : "Amin fegyver van",
+		"cars": [
+			"Dune FAV", "Zhaba", "Half-track", "Menacer", "Insurgent Pick-Up Custom", "Weaponized Tampa", "Chernobog"
+		]	
+	},
+	{
+		"name": "Nightclub Service entrance",
+		"aka": "Gondolom a két gép",
+		"space": 99,
+		"note" : "Akciógépek",
+		"cars": [
+			"két kocsi"
+		]	
+	}
+]

@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(68, 67, 67);
+}
+
+header {
+  height: 20ch;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header > div {
+  flex-grow: 5;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header > div > div:first-child {
+  text-transform: uppercase;
+  font-size: larger;
+}
+
+nav {
+  flex-grow: 1;
+  background-color: blue;
+  display: flex;
+  padding: 0 2rem 0 1rem;
+  align-items: center;
+}
+
+nav div {
+  margin: 0 10px 0;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  border-left: 2px solid black;
+  text-align: center;
+  width: 25%;
+}
+
+nav div:hover {
+  background-color: white;
+}
