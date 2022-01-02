@@ -92,11 +92,25 @@ nav div:hover {
 }
 
 .carPicDiv{
-  height: 130px;
-  width: 130px;
+
   
 }
 
+.carPic{
+  margin: 5px 5%;
+  width: 90%;
+  object-fit:cover;
+}
+
+
+
 .carDatasWrapper{
   background-color: saddlebrown;
+}
+
+.carData{
+  padding: 3px 5px; 
+  display: flex;
+  justify-content: space-between;
+  font-size: smaller;
 }

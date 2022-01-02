@@ -1,6 +1,11 @@
+import { tryFunction } from "./tryFunct.js";
+import { garageContainer } from "./garageContainer.js";
 const topDiv = document.querySelector("#cars-content");
 const try2 = "tryPic";
-//import { garageContainer } from "./garageContainer";
+
+//  ------ service Function
+
+/// ---- DOM
 
 function showRoomBase() {
   // befoglaló Div
@@ -9,7 +14,7 @@ function showRoomBase() {
   outerDiv.classList.add("fullSizeTry");
 
   /// ------------ GARAGECONTAINER
-  function garageContainer() {
+  /*   function garageContainer() {
     const oneGarage = document.createElement("div");
     outerDiv.append(oneGarage);
     oneGarage.classList.add("oneGarage");
@@ -37,46 +42,84 @@ function showRoomBase() {
 
     garageIdentifier();
 
-    function carWrapper() {
+    const tryCars = [
+      "első",
+      "második",
+      "harmadik",
+      "negyedik",
+      "ötödik",
+      "hatodik",
+      "hetedik",
+      "nyolcadik",
+      "kilencedik",
+      "tizedik",
+    ];
+
+    const tryCarsNew = [
+      { datas: ["ford", "escort", "crossworth"] },
+      { datas: ["ford", "escort", "crossworth"] },
+      { datas: ["ford", "escort", "crossworth"] },
+      { datas: ["ford", "escort", "hukk"] },
+      { datas: ["ford", "escort", "crossworth"] },
+      { datas: ["ford", "escort", ""] },
+      { datas: ["ford", "", "crossworth"] },
+      { datas: ["ford", "escort", "crossworth"] },
+      { datas: ["ford", "escort", "crossworth"] },
+      { datas: ["ford", "escort", "crossworth"] },
+    ];
+
+    function carWrapper(carDatas) {
       const carsWrapper = document.createElement("div");
       oneGarage.append(carsWrapper);
       carsWrapper.classList.add("carsWrapper");
 
-      const tryArray = [
-        "első",
-        "második",
-        "harmadik",
-        "negyedik",
-        "ötödik",
-        "hatodik",
-        "hetedik",
-        "nyolcadik",
-        "kilencedik",
-        "tizedik",
-      ];
-
-      tryArray.forEach((element) => {
+      carDatas.forEach((element) => {
         const carContainer = document.createElement("div");
         carsWrapper.append(carContainer);
         carContainer.classList.add("carContainer");
 
-        const carPicDiv = document.createElement("img");
+        const carPicDiv = document.createElement("div");
         carContainer.append(carPicDiv);
-        carPicDiv.src = `../img/${try2}.jpg`;
         carPicDiv.classList.add("carPicDiv");
+
+        const carPic = document.createElement("img");
+        carPicDiv.append(carPic);
+        carPic.classList.add("carPic");
+        carPic.src = `../img/${try2}.jpg`;
 
         const carDatasWrapper = document.createElement("div");
         carContainer.append(carDatasWrapper);
-        carDatasWrapper.textContent = "text";
         carDatasWrapper.classList.add("carDatasWrapper");
+
+        const dataTryArray = ["ford", "escort"];
+        const dataNamesArray = ["gyártó", "típus", "változat"];
+
+        console.log(element.datas);
+        function createCarDatas(dataNames, dataValues) {
+          for (let index = 0; index < dataNames.length; index++) {
+            let currentDataValue;
+            if (!dataValues[index]) {
+              currentDataValue = "n.a";
+            } else {
+              currentDataValue = dataValues[index];
+            }
+            const carData = document.createElement("div");
+            carDatasWrapper.append(carData);
+            carData.classList.add("carData");
+            carData.innerHTML = `<span>${dataNames[index]} :</span> <span>${currentDataValue}</span>`;
+          }
+        }
+
+        createCarDatas(dataNamesArray, element.datas);
+        //carDatasWrapper.classList.add("carDatasWrapper");
       });
     }
 
-    carWrapper();
-  }
+    carWrapper(tryCarsNew);
+  } */
 
   //
-  garageContainer();
+  garageContainer(outerDiv);
 }
 
 export { showRoomBase };
