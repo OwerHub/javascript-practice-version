@@ -335,7 +335,6 @@ const loadFunction = () => {
       let allCars = [];
 
       if (document.querySelector(".randomCarWrapper")) {
-        console.log("van");
         document.querySelector(".randomCarWrapper").remove();
       }
 
@@ -351,7 +350,13 @@ const loadFunction = () => {
       randomCarWrapper.classList.add("randomCarWrapper");
       gimmeCarCont.append(randomCarWrapper);
 
-      //behívjuk a képet
+      const findCarsGarage = (carName) => {
+        return garages.find((garage) => {
+          return garage.cars.includes(carName);
+        });
+      };
+
+      console.log(findCarsGarage(allCars[random]).name);
 
       randomCarWrapper.innerHTML = `
       <div>
@@ -362,21 +367,10 @@ const loadFunction = () => {
           <h3 style="text-transform: capitalize">${allCars[random].split("-")[1]} ${
         allCars[random].split("-")[2]
       }</h3>
+        <div>${findCarsGarage(allCars[random]).name}</div>
         </div>
       </div>
       `;
-
-      /*   const randomCarImage = document.createElement("img");
-      randomCarImage.src = `img/cars/${allCars[random]}.png`;
-      randomCarImage.classList = "randomCarImage";
-      gimmeCarCont.append(randomCarImage);
-      // hozzáadjuk a nevet
-      const randomCarName = document.createElement("h3");
-      randomCarName.textContent = ` ${allCars[random].split("-")[1]}  ${
-        allCars[random].split("-")[2]
-      }`;
-      randomCarName.style.textTransform = "capitalize";
-      gimmeCarCont.append(randomCarName); */
     };
 
     gimmeButton.addEventListener("click", randomCar);
