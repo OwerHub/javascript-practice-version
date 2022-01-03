@@ -5,7 +5,6 @@ const try2 = "tryPic";
 // kiszervezni, már ha a mime type nem baszódik meg
 
 function garageIdentifier(oneGarage, garageDatas) {
-  console.log(garageDatas);
   const garageIdentifierDiv = document.createElement("div");
   oneGarage.append(garageIdentifierDiv);
   garageIdentifierDiv.classList.add("garageIndentifierDiv");
