@@ -264,6 +264,16 @@ function showRoomBase() {
   garages.forEach((garageDatas) => {
     garageContainer(outerDiv, garageDatas);
   });
+
+  function countCar() {
+    let count = 0;
+    garages.forEach((garage) => {
+      count = count + garage.cars.length;
+    });
+    console.log(count);
+  }
+
+  countCar();
 }
 
 export { showRoomBase };
