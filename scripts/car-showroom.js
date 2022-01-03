@@ -1,4 +1,3 @@
-import { tryFunction } from "./tryFunct.js";
 import { garageContainer } from "./garageContainer.js";
 const topDiv = document.querySelector("#cars-content");
 const try2 = "tryPic";
@@ -13,113 +12,130 @@ function showRoomBase() {
   topDiv.append(outerDiv);
   outerDiv.classList.add("fullSizeTry");
 
-  /// ------------ GARAGECONTAINER
-  /*   function garageContainer() {
-    const oneGarage = document.createElement("div");
-    outerDiv.append(oneGarage);
-    oneGarage.classList.add("oneGarage");
-    //oneGarage.textContent = " garage";
-
-    function garageIdentifier() {
-      const garageIdentifierDiv = document.createElement("div");
-      oneGarage.append(garageIdentifierDiv);
-      garageIdentifierDiv.classList.add("garageIndentifierDiv");
-      garageIdentifierDiv.style.backgroundImage = `url(../img/${try2}.jpg)`;
-
-      const garageTextWrapper = document.createElement("div");
-      garageIdentifierDiv.append(garageTextWrapper);
-
-      const garageNameDiv = document.createElement("div");
-      garageTextWrapper.append(garageNameDiv);
-      garageNameDiv.classList.add("garageName");
-      garageNameDiv.textContent = "Garázsnév";
-
-      const garageSecondText = document.createElement("div");
-      garageTextWrapper.append(garageSecondText);
-      garageNameDiv.classList.add("garageSecond");
-      garageSecondText.textContent = "Second";
-    }
-
-    garageIdentifier();
-
-    const tryCars = [
-      "első",
-      "második",
-      "harmadik",
-      "negyedik",
-      "ötödik",
-      "hatodik",
-      "hetedik",
-      "nyolcadik",
-      "kilencedik",
-      "tizedik",
-    ];
-
-    const tryCarsNew = [
-      { datas: ["ford", "escort", "crossworth"] },
-      { datas: ["ford", "escort", "crossworth"] },
-      { datas: ["ford", "escort", "crossworth"] },
-      { datas: ["ford", "escort", "hukk"] },
-      { datas: ["ford", "escort", "crossworth"] },
-      { datas: ["ford", "escort", ""] },
-      { datas: ["ford", "", "crossworth"] },
-      { datas: ["ford", "escort", "crossworth"] },
-      { datas: ["ford", "escort", "crossworth"] },
-      { datas: ["ford", "escort", "crossworth"] },
-    ];
-
-    function carWrapper(carDatas) {
-      const carsWrapper = document.createElement("div");
-      oneGarage.append(carsWrapper);
-      carsWrapper.classList.add("carsWrapper");
-
-      carDatas.forEach((element) => {
-        const carContainer = document.createElement("div");
-        carsWrapper.append(carContainer);
-        carContainer.classList.add("carContainer");
-
-        const carPicDiv = document.createElement("div");
-        carContainer.append(carPicDiv);
-        carPicDiv.classList.add("carPicDiv");
-
-        const carPic = document.createElement("img");
-        carPicDiv.append(carPic);
-        carPic.classList.add("carPic");
-        carPic.src = `../img/${try2}.jpg`;
-
-        const carDatasWrapper = document.createElement("div");
-        carContainer.append(carDatasWrapper);
-        carDatasWrapper.classList.add("carDatasWrapper");
-
-        const dataTryArray = ["ford", "escort"];
-        const dataNamesArray = ["gyártó", "típus", "változat"];
-
-        console.log(element.datas);
-        function createCarDatas(dataNames, dataValues) {
-          for (let index = 0; index < dataNames.length; index++) {
-            let currentDataValue;
-            if (!dataValues[index]) {
-              currentDataValue = "n.a";
-            } else {
-              currentDataValue = dataValues[index];
-            }
-            const carData = document.createElement("div");
-            carDatasWrapper.append(carData);
-            carData.classList.add("carData");
-            carData.innerHTML = `<span>${dataNames[index]} :</span> <span>${currentDataValue}</span>`;
-          }
-        }
-
-        createCarDatas(dataNamesArray, element.datas);
-        //carDatasWrapper.classList.add("carDatasWrapper");
-      });
-    }
-
-    carWrapper(tryCarsNew);
-  } */
-
-  //
-  garageContainer(outerDiv);
+  // átmeneti adat, nem tudja beolvasni valamiért a JSON-t
+  let garages = [
+    {
+      name: "Exeptionalist Way",
+      aka: "Maradék Tároló",
+      space: 10,
+      note: "első garázs, ide raktam a cuccaim",
+      cars: [
+        "bF-raptor-",
+        "bravardo-gauntlet-",
+        "enus-huntley-S",
+        "enus-vindsor-",
+        "grotti-turismo-R",
+        "obey-omnis-",
+        "vapid-sandking-XL",
+        "uberMact-sCI-",
+      ],
+    },
+    {
+      name: "3 Alta St, Apt 57",
+      aka: "Akciógépek",
+      space: 99,
+      note: "Mission-okre ideális gépek",
+      cars: [
+        "declasse-scramjet-",
+        "enus-paragon-Armored",
+        "hVY-nightshark-",
+        "imponte-deluxo-",
+        "pegassi-opressor-MK1",
+        "karin-kuruma-Armored",
+      ],
+    },
+    {
+      name: "Del Perro Hts, 7",
+      aka: "Fast And etc, 2",
+      space: 99,
+      note: "Tuners gépek, amik nem fértek el az első garázsban, és pár másik gyors",
+      cars: [
+        "karin-previon-",
+        "obey-tailgater-S",
+        "annis-remus-",
+        "pegassi-zentorno-",
+        "ubermacht-cypher-",
+        "karin-futo-GTX",
+        "emperor-vectre-",
+      ],
+    },
+    {
+      name: "331 Supply Street",
+      aka: "American Muscle Cars",
+      space: 10,
+      note: "Az összes kiemelet motoros, állat cuccom",
+      cars: [
+        "schyster-deviant-",
+        "vapid-hotknife-",
+        "imponte-duke-oDeath-",
+        "bravardo-gauntlet-Classic_Custom",
+        "imponte-phoenix-",
+        "declasse-tulip-",
+        "imponte-dukes-beater",
+        "peyote-gasser-topless",
+      ],
+    },
+    {
+      name: "Great Chaparal Clubhouse",
+      aka: "Motoros Klub",
+      space: 99,
+      note: "Csak motoroknak, javítóműhellyel",
+      cars: [
+        "dinka-akuma-",
+        "pegassi-vortex-",
+        "western-zombie_Chopper-",
+        "western-rat_Bike-",
+        "western-soverign-",
+      ],
+    },
+    {
+      name: "870 Route 68",
+      aka: "Motoros Klub plusz ",
+      space: 99,
+      note: "Ami nem fért el a motorklubban",
+      cars: [
+        "maibatsu-manchez-scout",
+        "shitzu-hakuchou-",
+        "pegassi-bati_810-RR",
+        "nagasaki-hot_Rod-Blazer",
+      ],
+    },
+    {
+      name: "Route 68 Facility",
+      aka: "Katonai gépek",
+      space: 10,
+      note: "Amin fegyver van",
+      cars: [
+        "bF-dune-fav",
+        "rUNE-zhaba-",
+        "bravardo-half_track",
+        "hVY-menacer-",
+        "hVY-insurgen_pickup-Custom",
+        "declasse-tampa-Weaponized",
+        "hVY-chernobog-",
+      ],
+    },
+    {
+      name: "Arcade",
+      aka: "Arcade válogatás",
+      space: 10,
+      note: "csak a legjobbak",
+      cars: [
+        "pegassi-torero-",
+        "lapmadati-viseris-",
+        "pegassi-opressor-MKII",
+        "bF-weevil-",
+        "invetero-croquette-classic_topless",
+        "nagasaki-shotaro-",
+        "lampadati-tropos-Rallye",
+        "declasse-yosemite-drift",
+        "declasse-sabre-hotring",
+      ],
+    },
+  ];
+  garages.forEach((garageDatas) => {
+    garageContainer(outerDiv, garageDatas);
+  });
 }
 
 export { showRoomBase };
