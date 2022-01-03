@@ -19,6 +19,7 @@ function showRoomBase() {
       aka: "Maradék Tároló",
       space: 10,
       note: "első garázs, ide raktam a cuccaim",
+      order: 18,
       cars: [
         "bF-raptor-",
         "bravardo-gauntlet-",
@@ -35,6 +36,7 @@ function showRoomBase() {
       aka: "Akciógépek",
       space: 99,
       note: "Mission-okre ideális gépek",
+      order: 6,
       cars: [
         "declasse-scramjet-",
         "enus-paragon-Armored",
@@ -47,8 +49,9 @@ function showRoomBase() {
     {
       name: "Del Perro Hts, 7",
       aka: "Fast And etc, 2",
-      space: 99,
+      space: 10,
       note: "Tuners gépek, amik nem fértek el az első garázsban, és pár másik gyors",
+      order: 3,
       cars: [
         "karin-previon-",
         "obey-tailgater-S",
@@ -64,6 +67,7 @@ function showRoomBase() {
       aka: "American Muscle Cars",
       space: 10,
       note: "Az összes kiemelet motoros, állat cuccom",
+      order: 5,
       cars: [
         "schyster-deviant-",
         "vapid-hotknife-",
@@ -80,6 +84,7 @@ function showRoomBase() {
       aka: "Motoros Klub",
       space: 99,
       note: "Csak motoroknak, javítóműhellyel",
+      order: 13,
       cars: [
         "dinka-akuma-",
         "pegassi-vortex-",
@@ -93,6 +98,7 @@ function showRoomBase() {
       aka: "Motoros Klub plusz ",
       space: 99,
       note: "Ami nem fért el a motorklubban",
+      order: 14,
       cars: [
         "maibatsu-manchez-scout",
         "shitzu-hakuchou-",
@@ -105,6 +111,7 @@ function showRoomBase() {
       aka: "Katonai gépek",
       space: 10,
       note: "Amin fegyver van",
+      order: 7,
       cars: [
         "bF-dune-fav",
         "rUNE-zhaba-",
@@ -120,6 +127,7 @@ function showRoomBase() {
       aka: "Arcade válogatás",
       space: 10,
       note: "csak a legjobbak",
+      order: 1,
       cars: [
         "pegassi-torero-",
         "lapmadati-viseris-",
@@ -137,6 +145,7 @@ function showRoomBase() {
       aka: "Arena Workshop",
       space: 10,
       note: "Harci gépek az Arénába",
+      order: 4,
       cars: [
         "bravardo-sasquatch-apocalypse",
         "annis-zR_380-apocalypse",
@@ -150,6 +159,7 @@ function showRoomBase() {
       aka: "Begyűjtő",
       space: 10,
       note: "amiket nem tudtam máshova rakni",
+      order: 16,
       cars: [
         "coil-brawler-",
         "albany-franken-stange",
@@ -165,6 +175,7 @@ function showRoomBase() {
       aka: "Begyűjtő B2",
       space: 10,
       note: "amiket nem tudtam máshova rakni",
+      order: 17,
       cars: [
         "overflod-autarch-",
         "ocelot-XA_21-",
@@ -182,6 +193,7 @@ function showRoomBase() {
       aka: "Tuners Best Cars",
       space: 10,
       note: "Los Santos Tuners legjobb kocsijai",
+      order: 2,
       cars: [
         "vapid-dominator-ASP",
         "vapid-dominator-GTT",
@@ -199,6 +211,7 @@ function showRoomBase() {
       aka: "Free old classics",
       space: 10,
       note: "Ingyen színes dögök",
+      order: 12,
       cars: [
         "ocelot-lynx-",
         "bravardo-buffalo-sprunk",
@@ -214,6 +227,7 @@ function showRoomBase() {
       aka: "Pavel birodalma",
       space: 1,
       note: "A kostaka, ahol elfér a Torreador",
+      order: 15,
       cars: ["pegassi-torreador-"],
     },
     {
@@ -221,6 +235,7 @@ function showRoomBase() {
       aka: "Benny's cars",
       space: 10,
       note: "Kocsik Benny előtt és után",
+      order: 10,
       cars: [
         "ocelot-swinger-",
         "bravardo-banshee-900R_topless",
@@ -234,6 +249,7 @@ function showRoomBase() {
       aka: "Virítós kocsik",
       space: 10,
       note: "A villogok velük kategóriák ",
+      order: 9,
       cars: [
         "pegassi-zorusso-",
         "benefactor-krieger-",
@@ -246,6 +262,7 @@ function showRoomBase() {
       aka: "Filmes kocsik",
       space: 10,
       note: "Kocsik filmekből",
+      order: 11,
       cars: ["imponte-dukes-toretto", "vapid-ellie-", "lCC-sanctus-"],
     },
     {
@@ -253,6 +270,7 @@ function showRoomBase() {
       aka: "Agency",
       space: 20,
       note: "Agency kocsik, és pár jobb",
+      order: 8,
       cars: [
         "dewbauchee-champion-",
         "mamomoth-patriot-Mil_spec",
@@ -261,6 +279,9 @@ function showRoomBase() {
       ],
     },
   ];
+
+  garages.sort((a, b) => (a.order > b.order ? 1 : -1));
+
   garages.forEach((garageDatas) => {
     garageContainer(outerDiv, garageDatas);
   });

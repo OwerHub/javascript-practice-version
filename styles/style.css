@@ -72,6 +72,13 @@ nav div:hover {
   border-radius: 5px;
 }
 
+.garageIndentifierDiv div:nth-child(2){
+  margin: 10px 0;
+  font-style: italic;
+}
+
+
+
 .garageName{
   font-size: large;
   font-weight: bold;

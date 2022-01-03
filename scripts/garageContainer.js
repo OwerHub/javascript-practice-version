@@ -4,7 +4,8 @@ const try2 = "tryPic";
 
 // kiszervezni, már ha a mime type nem baszódik meg
 
-function garageIdentifier(oneGarage) {
+function garageIdentifier(oneGarage, garageDatas) {
+  console.log(garageDatas);
   const garageIdentifierDiv = document.createElement("div");
   oneGarage.append(garageIdentifierDiv);
   garageIdentifierDiv.classList.add("garageIndentifierDiv");
@@ -16,12 +17,17 @@ function garageIdentifier(oneGarage) {
   const garageNameDiv = document.createElement("div");
   garageTextWrapper.append(garageNameDiv);
   garageNameDiv.classList.add("garageName");
-  garageNameDiv.textContent = "Garázsnév";
+  garageNameDiv.textContent = garageDatas.aka;
 
   const garageSecondText = document.createElement("div");
   garageTextWrapper.append(garageSecondText);
   garageNameDiv.classList.add("garageSecond");
-  garageSecondText.textContent = "Second";
+  garageSecondText.textContent = garageDatas.name;
+
+  const garageThirdText = document.createElement("div");
+  garageTextWrapper.append(garageThirdText);
+  garageNameDiv.classList.add("garageSecond");
+  garageThirdText.textContent = garageDatas.note;
 }
 
 //---
@@ -114,20 +120,9 @@ function garageContainer(outerDiv, garageDatas) {
   outerDiv.append(oneGarage);
   oneGarage.classList.add("oneGarage");
 
-  garageIdentifier(oneGarage);
+  garageIdentifier(oneGarage, garageDatas);
 
-  const tryCarsNew = [
-    { car: "ford-escort-crossworth" },
-    { car: "ford-escort-" },
-    { car: "béla-escort-crossworth" },
-    { car: "akármi-escort-" },
-    { car: "ford-escort-crossworth" },
-    { car: "ford-escort-crossworth" },
-    { car: "ford-escort-crossworth" },
-    { car: "ford-escort-crossworth" },
-    { car: "ford-escort-crossworth" },
-    { car: "ford-escort-crossworth" },
-  ];
+  const tryCarsNew = [];
 
   carWrapper(tryCarsNew, oneGarage, garageDatas.cars);
 }

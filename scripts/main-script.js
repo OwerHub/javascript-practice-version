@@ -18,6 +18,13 @@ const loadFunction = () => {
   //const allContentDiv = Array.from(document.querySelectorAll(".sectionDiv"));
   const allContentDiv = Array.from(document.querySelectorAll(".sectionDiv"));
 
+  const startFunction = () => {
+    wheelContentDiv.style.display = "none";
+    aboutContentDiv.style.display = "none";
+  };
+
+  startFunction();
+
   const hideInactiveSections = (inComeId) => {
     allContentDiv.forEach((elementDiv) => {
       const id = elementDiv.getAttribute("id");
