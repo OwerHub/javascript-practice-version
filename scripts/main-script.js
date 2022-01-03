@@ -352,7 +352,21 @@ const loadFunction = () => {
       gimmeCarCont.append(randomCarWrapper);
 
       //behívjuk a képet
-      const randomCarImage = document.createElement("img");
+
+      randomCarWrapper.innerHTML = `
+      <div>
+        <img class="randomCarImage" src="img/cars/${
+          allCars[random]
+        }.png" alt="random" />
+        <div>
+          <h3 style="text-transform: capitalize">${allCars[random].split("-")[1]} ${
+        allCars[random].split("-")[2]
+      }</h3>
+        </div>
+      </div>
+      `;
+
+      /*   const randomCarImage = document.createElement("img");
       randomCarImage.src = `img/cars/${allCars[random]}.png`;
       randomCarImage.classList = "randomCarImage";
       gimmeCarCont.append(randomCarImage);
@@ -362,7 +376,7 @@ const loadFunction = () => {
         allCars[random].split("-")[2]
       }`;
       randomCarName.style.textTransform = "capitalize";
-      gimmeCarCont.append(randomCarName);
+      gimmeCarCont.append(randomCarName); */
     };
 
     gimmeButton.addEventListener("click", randomCar);
