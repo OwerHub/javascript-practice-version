@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(68, 67, 67);
+  background-color: #68521e;
 }
 
 header {
@@ -143,4 +143,11 @@ border-radius: 4px;
 }
 
 
+/* ----- service temp ---- */
 
+#about-us-content{
+  width: 70%;
+  margin: 20px auto;
+  padding: 15px 20px 10px;
+  border-radius: 20px;
+  background-color: rgb(235, 213, 186);}
