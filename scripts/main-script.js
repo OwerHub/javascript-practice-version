@@ -402,13 +402,14 @@ const loadFunction = () => {
       let carNameDiv = document.createElement("div");
       carNameDiv.classList.add("carNameDivInList");
       carNameDiv.textContent = carName;
+      carNameDiv.style.textTransform = "capitalize";
       carNamesWrapper.append(carNameDiv);
     });
     const counterDiv = document.createElement("div");
     counterDiv.textContent = carNameArray.length;
 
-    listHtml.append(counterDiv);
     listHtml.append(carNamesWrapper);
+    listHtml.append(counterDiv);
   };
 
   const carContainers = Array.from(document.querySelectorAll(".carContainer"));

@@ -19,12 +19,11 @@ function showRoomBase(garages) {
   </div>
   `;
 
-  outerDiv.insertAdjacentHTML("afterbegin", listHtml);
-
   garages.forEach((garageDatas) => {
     garageContainer(outerDiv, garageDatas);
   });
 
+  outerDiv.insertAdjacentHTML("beforeend", listHtml);
   // autószámláló
 
   function countCar() {
