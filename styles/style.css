@@ -93,12 +93,14 @@ nav div:hover {
  width: 100%;
  margin: 0 0 0 10px;
  padding: 5px 5px;
- display: flex;
- flex-wrap: wrap;
- justify-content: start;
+ 
 }
-
-
+.infragment{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  
+}
 
 .carContainer {
   background-color: rgb(235, 213, 186);
@@ -157,8 +159,8 @@ border-radius: 4px;
 
 #gimmeCarContainer{
   width: 50%;
-  min-width: 500px;
   min-height: 50vh;
+  min-width: 360px;
   margin: 10px auto;
   background-color:  #fed985;
   border-radius: 10px;
@@ -185,9 +187,10 @@ border-radius: 4px;
 }
 
 .randomCarImage{
-  margin: 10px 0;
+  min-width: 350px;
+  margin: 15px 0;
   max-width: 50%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* ----- service temp ---- */
@@ -198,3 +201,7 @@ border-radius: 4px;
   padding: 15px 20px 10px;
   border-radius: 20px;
   background-color: rgb(235, 213, 186);}
+
+.toggle{
+  background-color: green;
+}
