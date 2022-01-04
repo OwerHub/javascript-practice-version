@@ -14,9 +14,18 @@ function showRoomBase(garages) {
 
   garages.sort((a, b) => (a.order > b.order ? 1 : -1));
 
+  let listHtml = `
+  <div id="listOfSelectedCars">
+  </div>
+  `;
+
+  outerDiv.insertAdjacentHTML("afterbegin", listHtml);
+
   garages.forEach((garageDatas) => {
     garageContainer(outerDiv, garageDatas);
   });
+
+  // autószámláló
 
   function countCar() {
     let count = 0;

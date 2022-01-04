@@ -315,7 +315,7 @@ const loadFunction = () => {
     }
 
     if (targetDivId === "cars-content") {
-      showRoomBase(garages);
+      /*  showRoomBase(garages); */
     }
   };
 
@@ -375,6 +375,46 @@ const loadFunction = () => {
 
     gimmeButton.addEventListener("click", randomCar);
   };
+
+  // listakészítés
+
+  let carNameArray = [];
+
+  const clickMuti = (e) => {
+    const parent = e.closest(".carContainer");
+    const children = parent.querySelectorAll(".carDatasWrapper div");
+
+    let carnNameString = "";
+
+    children.forEach((element) => {
+      carnNameString += element.textContent;
+    });
+
+    carnNameString = carnNameString.replace(/  +/g, " ");
+
+    carNameArray.push(carnNameString);
+
+    const carNamesWrapper = document.createElement("div");
+    const listHtml = document.getElementById("listOfSelectedCars");
+    listHtml.innerHTML = "";
+
+    carNameArray.forEach((carName) => {
+      let carNameDiv = document.createElement("div");
+      carNameDiv.classList.add("carNameDivInList");
+      carNameDiv.textContent = carName;
+      carNamesWrapper.append(carNameDiv);
+    });
+    const counterDiv = document.createElement("div");
+    counterDiv.textContent = carNameArray.length;
+
+    listHtml.append(counterDiv);
+    listHtml.append(carNamesWrapper);
+  };
+
+  const carContainers = Array.from(document.querySelectorAll(".carContainer"));
+  carContainers.forEach((container) => {
+    container.addEventListener("click", (e) => clickMuti(e.target));
+  });
 };
 
 window.addEventListener("load", loadFunction);
